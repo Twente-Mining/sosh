@@ -31,8 +31,8 @@ net.core.rmem_max = 134217728
 net.core.wmem_default = 134217728
 net.core.wmem_max = 134217728
 
-net.core.optmem_max = 0
-net.core.netdev_max_backlog = 0
+net.core.optmem_max = 100
+net.core.netdev_max_backlog = 100
 
 # Increase memory mapped files limit
 vm.max_map_count = 2000000
