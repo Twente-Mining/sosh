@@ -1,4 +1,5 @@
 # source this to setup the sosh service environment
+#!/bin/bash
 
 if [[ -z $SOSH_SKIP_SOLANA_SOURCE_CHECK ]]; then
   [[ -d ~/solana/.git ]] || {
@@ -18,9 +19,7 @@ fi
   exit 1
 }
 
-if [[ -d ~/solana/jito-programs ]]; then
-  JITO=1
-fi
+[[ -d ~/solana/jito-programs ]] && JITO=1
 
 SOSH_CONFIG="$(basename "$(readlink ~/active-key)")"
 
